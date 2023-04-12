@@ -19,4 +19,10 @@ public class EstudianteServiceImpl implements EstudianteService {
 		return repositorio.findAll();
 	}
 
+	@Override
+	public Estudiante registrarEstudiante(Estudiante estudiante) {
+		// TODO Auto-generated method stub
+		return repositorio.save(estudiante);
+	}
+
 }
