@@ -1,0 +1,129 @@
+:root{
+    --font-serif: 'PT Serif', serif;
+    --font-clash: 'Clash Display', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+html{
+    font-size: 62.5%;
+}
+
+/*NAV*/
+/*----------Logo------*/
+a{
+    text-decoration: none;
+    color: black;
+    font-family: var(--font-serif);
+    font-size: 2.6rem;
+}
+.nav{
+    display: flex;
+    height: 10rem;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+.nav > .logo > a > h1,
+.nav > .logo > a > p{
+    color: #7e600c;
+}
+.nav > .logo > img{
+    width: 10rem;
+}
+.nav .logo > a > p{
+    text-decoration: underline;
+}
+
+.logo{
+    display: flex;
+    justify-content:center;
+    flex: 2;
+    text-align: center;
+    align-items: center;
+}
+/*---------------Enlaces------------*/
+.nav > .contenido-enlaces{
+    display: flex;
+    justify-content: right;
+    margin: auto 20rem;
+    flex: 6;
+}
+.nav > .contenido-enlaces > .enlaces{
+    max-width: 80rem;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+.nav > .enlaces > a{
+    padding: 1rem 2rem;
+}
+@media(max-width:768px){
+    .nav{
+        flex-direction: column;
+        height: 100%;
+    }
+    /*Media Query Logo Nav*/
+    .nav > .logo{
+        padding: 1rem 0;
+        flex-direction: column;
+    }
+    .nav> .logo > img{
+        width: 10rem;
+    }
+    /*Media Query Enlaces Nav*/
+    .nav > .contenido-enlaces> .enlaces{
+        flex-direction: column;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+}
+@media(min-width:769px){
+    /*Media Query Logo Nav*/
+    .nav > .logo{
+        width: 20rem;
+        flex: auto;
+    }
+    /*Media Query Enlaces Nav*/
+    .nav > .contenido-enlaces{
+        margin: 0;
+        width: auto;
+        justify-content: center;
+    }
+    .nav > .contenido-enlaces > .enlaces{
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+/*img-Presentacion*/
+.img-presentacion{
+    margin: 1rem auto;
+    background-image: url(src/fondo_main.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media(max-width:600px){
+    .img-presentacion{
+        max-width: 568px;
+        min-height: 20rem;
+        max-height: 30rem;
+    }
+}
+@media(min-width:601px){
+    .img-presentacion{
+        max-width: 900px;
+        height: 30rem;
+        max-height: 500rem;
+    }
+}
+@media(min-width:900px){
+    .img-presentacion{
+        max-width: 100%;
+        max-height: 70%;
+        height: 60rem;
+    }
+}

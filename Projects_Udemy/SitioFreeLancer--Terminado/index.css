@@ -1,0 +1,257 @@
+:root{
+    --blanco: #ffff;
+    --oscuro: #212121;
+    --secundario: #f3c33f;
+    --primario:#0097A7;
+    --gris:#757575;
+
+    --fuente_titulo:4rem;
+}
+*{
+    font-family: 'Lexend Peta', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    background-image: linear-gradient(to top,rgb(199, 199, 199) 0%, var(--blanco) 100%);
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+    margin: 0;
+}
+h3{
+    font-size: 1.8rem;
+}
+.sombra{
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+header .titulo{
+    font-size: 7rem;
+    margin: 2rem 0;
+}
+.titulo{
+    text-align: center;
+    font-size: var(--fuente_titulo);
+    color: var(--oscuro);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo span{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+/*------------NAV----------*/
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.navegacion-principal{
+    background-color: var(--primario);
+    display: flex;
+    justify-content: space-around;
+}
+.navegacion-principal a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.8rem;
+    padding: 1.5rem 0;
+}
+    .navegacion-principal a:hover{
+        background-color: var(--secundario);
+        border-radius: 0.3rem;
+    }
+.nav-bg{
+    background-color: var(--primario);
+}
+/*----MEDIA QUERY NAV---------*/
+@media(max-width:480px){
+    .navegacion-principal{
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+}
+@media(min-width:768px){
+    .navegacion-principal a{
+        font-size: 2.4rem;
+    }
+    .titulo{
+        font-size: 4.8rem;
+    }
+}
+
+/*-----------Hero---------*/
+.hero{
+    background-image: url(src/fondo-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50rem;
+    position: relative;
+}
+.hero .container-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero .container-hero h2,p{
+    color: var(--blanco);
+    font-size: 4.5rem;
+    margin: 5rem 0;
+    text-align: center;
+}
+.ubicacion{
+    display: flex;
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;/*hacer mayuscula el texto*/
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+@media(max-width:480px){
+    .ubicacion{
+        flex-direction: column;
+    }
+    .container-hero h2,p{
+        margin: 0;
+    }
+    
+}
+@media(max-width:760px){
+    .boton{
+        width: auto;
+    }
+}
+
+/*-----Main-------*/
+.info{
+    background-color: var(--blanco);
+    margin: 6rem auto;
+    padding: 2rem 0 0 0;
+    border-radius: 0.3rem;
+}
+    .info .titulo{
+        text-decoration: underline;
+    }
+.container-info p{
+    color: var(--oscuro);
+    margin: 0;
+    padding: 2rem 19rem;
+    font-size: 2rem;
+}
+.container-info h3{
+    font-size: 3rem;
+}
+#lenguajes{
+    margin: 1rem 15rem;
+}
+#lenguajes img{
+    width: 20rem;
+    height: 22rem;
+}
+
+.container-estudios{
+    width: 60%;
+    margin: 0 auto;
+    
+}
+.container-info .container-estudios p{
+    font-size: 2rem;
+    text-align: start;
+    padding: 0.5rem 7rem;
+}
+/*----Salto de linea*/
+hr{
+    margin: 7rem 0;
+}
+/*-----Proyectos----*/
+.proyectos ul{
+    width: 40%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.proyectos ul li{
+    font-size: 3rem;
+    list-style: none;
+}
+.proyectos ul{
+    padding: 2rem 0;
+}
+
+@media(max-width:480px){
+    #lenguajes img{
+        width: 13rem;
+        height: 15rem;
+    }
+    img{
+        width: 70vw;
+        height: 20rem;
+    }
+}
+
+/*-----Footer-----*/
+footer{
+    background-color: #d1cdcdd7;
+    height: 100%;
+}
+.container-footer{
+    padding: 1rem 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container-footer svg{
+    width: 50px;
+}
+.container-footer h1{
+    margin: 0;
+    padding: 0;
+}
+.flex{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex a{
+    text-decoration: none;
+    color: var(--gris);
+    font-size: 4rem;
+}
+.container_correo{
+    width: 50%;
+}
+.container_correo .flex{
+    display: flex;
+    padding: 0 10%;
+    justify-content: start;
+}
+
+#contacto .container-footer hr{
+    margin: 0.5rem 4rem;
+}
