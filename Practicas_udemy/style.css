@@ -5,7 +5,7 @@
 *{
     margin: 0;
     padding: 0;
-    transition: all 1s;
+    transition: all .3s;
 }
 html{
     font-size: 62.5%;
@@ -57,9 +57,18 @@ a{
     display: flex;
     justify-content: space-around;
 }
-.nav > .enlaces > a{
+
+.nav >  .contenido-enlaces > .enlaces > a{
     padding: 1rem 2rem;
 }
+/*HOVER ENLACES*/
+@media(min-width:800px){
+    .nav > .contenido-enlaces > .enlaces > a:hover{
+        color: #7e600c;
+        font-size: 2.8rem;
+    } 
+}
+
 @media(max-width:768px){
     .nav{
         flex-direction: column;
@@ -125,5 +134,54 @@ a{
         max-width: 100%;
         max-height: 70%;
         height: 60rem;
+    }
+}
+/*Titulo*/
+body > .tittle-cuerpo-1{
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 4rem;
+}
+/*cuerpo-1*/
+.cuerpo-1{
+    display: grid;
+    margin: 0 auto;
+}
+.cuerpo-1 > .caja-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cuerpo-1 > .caja-img > img{
+    border: 2px black solid;
+    border-radius: 1.5rem;
+    max-width: 90%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+@media(max-width:768px){
+    .cuerpo-1{
+        grid-template-columns: 1fr;
+    }
+    .cuerpo-1 > .caja-img{
+        margin: 1rem auto;
+        width: 95%;
+        height: 40rem;
+    }
+}
+@media(min-width:769px){
+    .cuerpo-1{
+        width: 90%;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 1.5rem 0;
+    }
+    .cuerpo-1 > .caja-img{
+        height: 50rem;
+    }
+    .cuerpo-1 > .caja-img > img{
+        height: 80%;
     }
 }
