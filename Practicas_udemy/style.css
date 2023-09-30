@@ -1,6 +1,11 @@
 :root{
     --font-serif: 'PT Serif', serif;
     --font-clash: 'Clash Display', sans-serif;
+    /*CELULAR TEXTOS*/
+    --font-size-celular-tablet: 1.9rem;
+    --font-size-celular-tablet-Titulo:2.3rem;
+    --font-size-pc-laptop:2.5rem;
+    --font-size-pc-laptop-Titutlo:3rem;
 }
 *{
     margin: 0;
@@ -10,6 +15,12 @@
 html{
     font-size: 62.5%;
 }
+/*Titulos*/
+.tittle{
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 4rem;
+}
 
 /*NAV*/
 /*----------Logo------*/
@@ -17,7 +28,7 @@ a{
     text-decoration: none;
     color: black;
     font-family: var(--font-serif);
-    font-size: 2.6rem;
+    font-size: var(--font-size-celular-tablet-Titulo);
 }
 .nav{
     display: flex;
@@ -136,12 +147,7 @@ a{
         height: 60rem;
     }
 }
-/*Titulo*/
-body > .tittle-cuerpo-1{
-    text-align: center;
-    margin: 1rem 0;
-    font-size: 4rem;
-}
+
 /*cuerpo-1*/
 .cuerpo-1{
     display: grid;
@@ -183,5 +189,75 @@ body > .tittle-cuerpo-1{
     }
     .cuerpo-1 > .caja-img > img{
         height: 80%;
+    }
+}
+/*Cuerpo-2*/
+.cuerpo-2 > .contenedor > .section-info{
+    width: 80%;
+    margin: 0 auto;
+}
+.section-info > img{
+    margin: 2rem auto;
+    object-fit: cover;
+}
+@media(max-width:768px){
+    .cuerpo-2 > .contenedor > .section-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .section-info > p{
+        font-size: var(--font-size-celular-tablet);
+    }
+    .section-info > img{
+        min-width: 20rem;
+        max-width: 30rem;
+        width: 100%;
+        height: 40rem;
+        margin: 2rem auto;
+        object-fit: cover;
+    }
+    /*Titulo Del final*/
+    .section-info > h3{
+        font-size: var(--font-size-celular-tablet-Titulo);
+        text-align: center;
+    }
+}
+@media(min-width:769px){
+    .cuerpo-2 > .contenedor > .section-info{
+        display: grid;
+        width: 80%;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .section-info > p{
+        font-size: var(--font-size-pc-laptop);
+    }
+    .section-info > img{
+        min-width: 20rem;
+        max-width: 40rem;
+        width: 100%;
+        height: 40rem;
+    }
+    /*Acomodando imagenes en sicsac para Responsive laptop y pc*/
+    .section-info > img:nth-child(4){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .section-info > img:nth-child(8){
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .section-info > p:nth-child(9){
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+    .section-info > h3{
+        grid-column: 1/3;
+        /*Titulo del Final*/
+        font-size: var(--font-size-pc-laptop-Titutlo);
+        text-align: center;
+        text-decoration: underline;
     }
 }
