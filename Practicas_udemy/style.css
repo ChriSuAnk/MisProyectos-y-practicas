@@ -419,3 +419,25 @@ a{
         grid-row: 2/3;
     }
 }
+/*Footer*/
+.footer{
+    margin-top: 3rem;
+}
+.footer > .contenedor{
+    background-color: rgb(52, 52, 52);
+}
+.footer > .contenedor > p{
+    text-align: center;
+    color: white;
+    padding: .5rem 0;
+}
+@media(max-width:768){
+    .footer > .contenedor >p{
+        font-size: var(--font-size-celular-tablet-Titulo);
+    }
+}
+@media(min-width:769px){
+    .footer > .contenedor > p{
+        font-size: var(--font-size-pc-laptop);
+    }
+}
