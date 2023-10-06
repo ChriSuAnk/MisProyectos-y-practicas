@@ -261,10 +261,6 @@ img {
     margin-top: 2rem;
 }
 /*-----------Pagina 2 Nosotros----------*/
-.pagina_nosotros > .contenedor > h3{
-    text-align: center;
-    padding: 1rem 0;
-}
 .pagina_nosotros > .contenedor{
     margin: 1rem auto;
 }
@@ -277,4 +273,36 @@ img {
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
     }    
+}
+/*----------Pagina 3 Cursos-------------------*/
+.pagina_cursos > .contenedor{
+    margin: 1rem auto;
+}
+.pagina_cursos > .contenedor > .curso{
+    border-bottom: 1px solid var(--color-gris);
+    padding: 3rem 0;
+}
+.pagina_cursos > .contenedor > .curso:last-of-type{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.pagina_cursos > .contenedor > .curso > .curso__info > p{
+    font-family: var(--font-titulo);
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.pagina_cursos > .contenedor > .curso > .curso__info > p > span,
+.pagina_cursos > .contenedor > .curso > .curso__info > p:last-of-type{
+    font-weight: normal;
+}
+@media(min-width:769px){
+    .pagina_cursos > .contenedor > .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+    }
+    .pagina_cursos > .contenedor > .curso > .curso__info{
+        margin: 0 auto;
+    }
 }
