@@ -306,3 +306,11 @@ img {
         margin: 0 auto;
     }
 }
+/*------------pagina_blog_entrada 4-----------*/
+.pagina_blog_entrada > .contenedor > h3{
+    padding: 2rem 0;
+}
+/*-----------pagina contacto 5-----------*/
+.pagina_contacto > .contenedor > .contacto-bg{
+    
+}
