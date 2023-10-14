@@ -92,6 +92,7 @@ img {
     margin: 1rem 0;
     padding: 1rem 2rem;
     border-radius: 0.6rem;
+    border: none;
 }
 .boton--primario{
     background-color: var(--color-negro);
@@ -126,6 +127,12 @@ img {
 }
 
 /*------HEADER---------*/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+.no-web´.header{
+    background-image: url(../img/banner.jpg);
+}
 .header {
     background-image: url(../img/banner.jpg);
     height: 60rem;
@@ -195,7 +202,8 @@ img {
     }
 }
 
-/*Blog Contenido principal*/
+/*Blog Contenido principal index.html*/
+
 .contenido-principal>.blog>h2,
 .contenido-principal>.sidebar>h2 {
     text-align: center;
@@ -312,5 +320,32 @@ img {
 }
 /*-----------pagina contacto 5-----------*/
 .pagina_contacto > .contenedor > .contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.formulario{
+    background-color: var(--color-blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 3rem;
     
+}
+.campo{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.campo__label{
+    flex: 0 0 10rem;
+    text-align: right;
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--color-gris);
+}
+.campo__field--textarea{
+    height: 20rem;
 }

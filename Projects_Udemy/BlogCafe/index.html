@@ -37,7 +37,7 @@
             <h2>Nuestro Blog</h2>
             <article class="entrada-blog">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="">
+                    <img loading="lazy" src="img/blog1.webp" alt="">
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tipos de Granos de Café</h4>
@@ -51,7 +51,7 @@
             </article>
             <article class="entrada-blog">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="">
+                    <img loading="lazy" src="img/blog2.webp" alt="">
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">3 Deliciosas recetas de Café</h4>
@@ -65,7 +65,11 @@
             </article>
             <article class="entrada-blog">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <source loading="lazy" srcset="img/blog3pagina.jpg" type="image/jpg">
+                        <img loading="lazy" src="img/blog3.webp" alt="">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Beneficios del Café</h4>
@@ -122,5 +126,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 </html>

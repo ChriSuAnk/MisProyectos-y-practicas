@@ -13,7 +13,7 @@
     <title>Blog Cafe</title>
 </head>
 
-<body class="pagina_blog_entrada">
+<body class="pagina_contacto">
     <header class="header">
         <div class="contenedor">
             <div class="barra">
@@ -33,27 +33,62 @@
         </div>
     </header>
     <main class="contenedor">
-        <h3 class="centrar-texto">Sobre Nosotros</h3>
-        <img loading="lazy" src="img/blog1.jpg" alt="">
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur quam 
-            quaerat ut vero modi molestias unde, voluptatibus enim, placeat expedita
-             obcaecati incidunt possimus libero omnis, recusandae repellendus consequuntur 
-             maiores! Reprehenderit.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, earum quo dolorem 
-            quod architecto consequatur nemo vitae quidem quos, laborum accusamus aperiam enim
-             distinctio repellendus libero commodi similique alias cumque?
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, iusto libero?
-             Inventore nobis temporibus dolore sequi quas numquam dignissimos natus quos 
-             est voluptatibus beatae fugiat, facere impedit maiores esse odio.
-             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam cupiditate, assumenda
-              reprehenderit excepturi quidem hic alias sequi at rem eveniet fuga natus, possimus
-               similique iste vitae quo facilis aliquam ducimus!
-        </p>
+        <h3 class="centrar-texto">Contacto</h3>
+        <div class="contacto-bg">
+        </div>
+        <form action="" class="formulario">
+            <div class="campo">
+                <label
+                    class="campo__label"
+                    for="nombre"
+                >Tu Nombre:</label>
+                <input class="campo__field"
+                    type="text" 
+                    placeholder="Tu Nombre" 
+                    id="nombre"
+                >
+            </div>
+            <div class="campo">
+                <label
+                    class="campo__label"
+                    for="correo">Tu Correo:</label>
+                <input class="campo__field"
+                    type="email" 
+                    placeholder="Tu Correo" 
+                    id="correo"
+                >
+            </div>
+            <div class="campo">
+                <label 
+                    class="campo__label"
+                    for="numero"
+                    >Tu Numero:</label>
+                <input class="campo__field"
+                    type="number"
+                    placeholder="Tu Numero" 
+                    id="numero"
+                    >
+            </div>
+            <div class="campo">
+                <label 
+                    class="campo__label"
+                    for="mensaje"
+                    class="campo__field "
+                    >Mensaje:</label>
+                <textarea 
+                    class="campo__field campo__field--textarea" 
+                    id="mensaje"
+                    placeholder="Mensaje"
+                    ></textarea>
+            </div>
+            <div class="campo">
+                <input 
+                    class="boton boton--primario" 
+                    type="submit"
+                    value="Enviar"
+                >
+            </div>
+        </form>
     </main>
     <footer class="footer">
         <div class="contenedor">
@@ -70,4 +105,5 @@
         </div>
     </footer>
 </body>
+
 </html>
