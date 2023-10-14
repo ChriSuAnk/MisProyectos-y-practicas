@@ -346,6 +346,15 @@ img {
     flex: 1;
     border: 1px solid var(--color-gris);
 }
-.campo__field--textarea{
-    height: 20rem;
+@media(max-width:768px){
+    .campo{
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: var(--font-size-celular-tablet);
+    }
+    .campo__label{
+        text-align: left;
+        flex: 1;
+    }
 }
