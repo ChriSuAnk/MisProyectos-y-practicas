@@ -12,9 +12,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=PT+Sans:wght@700&display=swap"
         rel="stylesheet">
     <title>Blog Cafe</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('a').click(function (e) {
+                e.preventDefault();
+                var newPage = $(this).attr('href');
+                $('body').fadeOut(200, function () {
+                    window.location = newPage;
+                });
+            });
+        });
+    </script>
+
 </head>
 
-<body>
+<body id="contenidoNoSeleccionable">
     <header class="header">
         <div class="contenedor">
             <div class="barra">
@@ -83,32 +106,28 @@
                 </div>
             </article>
         </main>
-        <aside class="sidebar">
+        <aside class="sidebar" oncontextmenu="return false;">
             <h2>Nuestros Cursos y Talleres</h2>
-            <ul class="cursos no-padding">
-                <li class="lateral_cursos">
+            <ul class="cursos no-padding" id="accordion">
+                <li class="lateral_cursos" oncontextmenu="return false;">
                     <h4 class="no-margin">Tecnicas de Exraccion de Café</h4>
                     <p>
                         Precio:
-                        <span>Gratis</span>
-                    </p>
-                    <p>
+                        <span>Gratis</span> <br>
                         Cupo:
                         <span>20</span>
+                        <a href="entrada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
                 </li>
-                <li class="lateral_cursos">
+                <li class="lateral_cursos" oncontextmenu="return false;">
                     <h4 class="no-margin">4 Recetas de Cafe para principiantes</h4>
                     <p>
                         Precio:
-                        <span>Gratis</span>
-                    </p>
-                    <p>
+                        <span>Gratis</span> <br>
                         Cupo:
                         <span>20</span>
+                        <a href="entrada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
                 </li>
             </ul>
         </aside>

@@ -11,6 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=PT+Sans:wght@700&display=swap"
         rel="stylesheet">
     <title>Blog Cafe</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a').click(function (e) {
+                e.preventDefault();
+                var newPage = $(this).attr('href');
+                $('body').fadeOut(200, function () {
+                    window.location = newPage;
+                });
+            });
+        });
+    </script>
 </head>
 
 <body class="pagina_contacto">

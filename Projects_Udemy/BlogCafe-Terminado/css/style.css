@@ -2,7 +2,7 @@
     --font-titulo: 'PT Sans' Sans-serif;
     --font-parrafos: 'Open Sans' Sans-serif;
 
-    --color-primario: #784D3C;
+    --color-primario: #007fff;
     --color-blanco: #ffffff;
     --color-negro: #000;
     --color-gris:#68686890;
@@ -69,6 +69,18 @@ img {
     text-align: center;
 }
 
+/* Estilos para la animación de cambio de página */
+#content {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-out {
+    opacity: 0;
+}
 /*font size global*/
 /** CELULAR-TABLET **/
 @media(max-width:768px) {
@@ -100,7 +112,7 @@ img {
 }
 .boton--secundario{
     background-color: var(--color-primario);
-    color: var(--color-blanco);
+    color: var(--color-blanco)!important;
 }
 @media(min-width:769px){
     .boton{
